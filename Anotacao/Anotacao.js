@@ -117,3 +117,35 @@ function renderNotes(filteredNotes = null) {
     notesContainer.appendChild(div);
   });
 }
+function deleteNote(id) {
+  const notes = getNotes().filter(note => note.id !== id);
+  localStorage.setItem('notes', JSON.stringify(notes));
+  renderNotes();
+}
+// Função para deletar nota
+function deleteNote(id) {
+  const notes = getNotes().filter(note => note.id !== id);
+  localStorage.setItem('notes', JSON.stringify(notes));
+  renderNotes();
+}
+
+// Função para renderizar notas (com botões editar e excluir)
+function renderNotes(filteredNotes = null) {
+  const notesContainer = document.getElementById('notesContainer');
+  notesContainer.innerHTML = '';
+
+  const notes = filteredNotes || getNotes();
+
+  notes.forEach(note => {
+    const div = document.createElement('div');
+    div.className = 'note';
+    div.style.left = `${note.x}px`;
+    div.style.top = `${note.y}px`;
+    div.innerHTML = `
+      <button class="edit-btn" onclick="editNote(${note.id})"><i class="bi bi-pencil-fill"></i></button>
+      <button class="delete-btn" onclick="deleteNote(${note.id})"><i class="bi bi-trash-fill"></i></button>
+      <div>${note.text}</div>
+    `;
+    notesContainer.appendChild(div);
+  });
+}

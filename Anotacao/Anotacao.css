@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 /* Layout base */
 body {
   margin: 0;
@@ -86,9 +87,15 @@ body {
   max-width: 260px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   word-wrap: break-word;
-  z-index: 500;
+  white-space: normal; /* ou pre-wrap se quiser */
   font-size: 0.95rem;
   transition: transform 0.1s ease;
+
+  /* sem height fixo */
+}
+
+.note > div {
+  white-space: pre-wrap;
 }
 
 .note:hover {
@@ -150,4 +157,17 @@ body {
   color: #dc3545;
 }
 
+a{
+     font-family: "Permanent Marker", cursive;
+     color: black;
+  font-weight: 400;
+  font-style: normal;
+ font-size: clamp(14px, 2vw, 18px); /* cresce conforme o tamanho da tela */
+}
+a:hover{
+
+
+  font-style: italic;
+
+}
 
