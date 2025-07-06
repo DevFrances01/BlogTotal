@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  overflow-x: hidden;
+overflow: hidden; /* Para ocultar as barras de rolagem */
   background-color: #f9f9f9;
   color: #333;
 }
@@ -148,4 +148,23 @@ body {
 .delete-btn {
   right: 5px;
   color: #dc3545;
+}
+
+
+.line {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    animation: lineAnimation 3s linear infinite;
+}
+
+
+@keyframes lineAnimation {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
 }
