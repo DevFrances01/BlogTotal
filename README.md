@@ -17,6 +17,33 @@
 - ✔️ Fonte personalizada: Google Fonts
 - ✔️ Sem uso de banco de dados até o momento (baseado em dados estáticos)
 
+<pre>
+📁 Home
+├── blog.html       # Página principal do blog
+├── blog.css        # Estilos personalizados
+├── blog.js         # Lógica e interatividade
+
+📁 IMG
+├── foto1.jpg       # Imagem de exemplo
+├── foto2.png       # Outra imagem
+└── ...             # Outras imagens
+
+📁 Sobre
+├── sobre.html      # Página "Sobre"
+├── sobre.css       # Estilos da página "Sobre"
+├── sobre.js        # Scripts da página "Sobre"
+
+📁Anotacao
+├── sobre.html      # Página "Anotacao"
+├── sobre.css       # Estilos da página "Anotacao"
+├── sobre.js        # Scripts da página "Anotcao"
+
+
+</pre>
+
+
+
+
 ## 📦 Instalação
 
 Clone o repositório:
