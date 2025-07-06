@@ -32,6 +32,13 @@
 ├── sobre.html      # Página "Sobre"
 ├── sobre.css       # Estilos da página "Sobre"
 ├── sobre.js        # Scripts da página "Sobre"
+
+📁Anotacao
+├── sobre.html      # Página "Anotacao"
+├── sobre.css       # Estilos da página "Anotacao"
+├── sobre.js        # Scripts da página "Anotcao"
+
+
 </pre>
 
 
