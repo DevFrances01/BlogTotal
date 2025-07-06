@@ -55,7 +55,7 @@ footer {
 }
 
 a {
-  color: #0278ff;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -107,7 +107,7 @@ h2 {
 }
 
 .modo-escuro a {
-  color: #66ccff;
+  color: #ffffff;
 }
 
 .modo-escuro .topico,
@@ -125,5 +125,4 @@ p {
   gap: 10px; /* Espaço entre logo e texto */
   font-size: 2rem;
 }
-
 
