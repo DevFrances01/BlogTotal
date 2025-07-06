@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-overflow: hidden; /* Para ocultar as barras de rolagem */
+
   background-color: #f9f9f9;
   color: #333;
 }
@@ -151,20 +151,3 @@ overflow: hidden; /* Para ocultar as barras de rolagem */
 }
 
 
-.line {
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2);
-    animation: lineAnimation 3s linear infinite;
-}
-
-
-@keyframes lineAnimation {
-    0% {
-        transform: translateY(100%);
-    }
-    100% {
-        transform: translateY(-100%);
-    }
-}

@@ -55,12 +55,7 @@ function renderNotes() {
     div.style.left = `${note.x}px`;
     div.style.top = `${note.y}px`;
     div.innerHTML = `
-      <button class="edit-btn" onclick="editNote(${note.id})">
-        <i class="bi bi-pencil-fill"></i>
-      </button>
-      <button class="delete-btn" onclick="deleteNote(${note.id})">
-        <i class="bi bi-trash-fill"></i>
-      </button>
+      <button class="edit-btn" onclick="editNote(${note.id})">✏</button>
       <div>${note.text}</div>
     `;
     notesContainer.appendChild(div);
@@ -85,11 +80,40 @@ function updateNote(id, newText) {
   renderNotes();
 }
 
-function deleteNote(id) {
-  const notes = getNotes().filter(note => note.id !== id);
-  localStorage.setItem('notes', JSON.stringify(notes));
-  renderNotes();
+// Inicializa
+renderNotes();
+
+
+const searchInput = document.querySelector('input[type="search"]');
+
+searchInput.addEventListener('input', filterNotes);
+
+// Função que filtra as notas com base no texto digitado
+function filterNotes() {
+  const query = searchInput.value.toLowerCase();
+  const notes = getNotes();
+
+  const filtered = notes.filter(note => note.text.toLowerCase().includes(query));
+  renderNotes(filtered);
 }
 
-// Inicializar
-renderNotes();
+// Já existente – só garantir que renderNotes aceita filtro
+function renderNotes(filteredNotes = null) {
+  const notesContainer = document.getElementById('notesContainer');
+  notesContainer.innerHTML = '';
+
+  const notes = filteredNotes || getNotes();
+
+  notes.forEach(note => {
+    const div = document.createElement('div');
+    div.className = 'note';
+    div.style.left = `${note.x}px`;
+    div.style.top = `${note.y}px`;
+    div.innerHTML = `
+      <button class="edit-btn" onclick="editNote(${note.id})"><i class="bi bi-pencil-fill"></i></button>
+      <button class="delete-btn" onclick="deleteNote(${note.id})"><i class="bi bi-trash-fill"></i></button>
+      <div>${note.text}</div>
+    `;
+    notesContainer.appendChild(div);
+  });
+}

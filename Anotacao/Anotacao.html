@@ -4,21 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Notas Flutuantes</title>
-   <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="Anotacao.css" />
 </head>
-<body>
-
+<body>  
+   <nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand">Navbar</a>
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
   <div class="sidebar" id="sidebar">
     <textarea id="noteInput" placeholder="Digite sua anotação..."></textarea>
     <button id="saveNote">Salvar</button>
   </div>
 
-  <button id="newNoteBtn"><i class="bi bi-journal-plus"></i> Nova Anotação</button>
+  <button id="newNoteBtn">➕ Nova Anotação</button>
   <div id="notesContainer"></div>
 
+  
+
   <script src="Anotacao.js"></script>
-  <script src="anim.js"></script>
 </body>
 </html>
