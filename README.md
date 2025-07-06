@@ -1,15 +1,10 @@
-# 📝 BlogTotal
 
-**BlogTotal** é um projeto de blog desenvolvido para organizar, publicar e gerenciar conteúdos de forma simples e eficiente. Ideal para criadores de conteúdo, escritores ou qualquer pessoa que deseje manter um blog pessoal ou profissional.
 
-## 🚀 Funcionalidades
+     
+<img src="img/51.png" alt="Gato preto" width="150" style="background-color:white; padding:60px; border-radius:50%; border:1px solid #ddd;">
 
-- Publicação de posts com título, conteúdo e data
-- Edição e exclusão de posts
-- Organização por categorias ou tags
-- Interface limpa e responsiva
-- Suporte a Markdown (opcional)
-
+ ## BlgoTotal
+**BlogTotal** é um projeto de blog desenvolvido para organizar, publicar e gerenciar conteúdos de forma simples e eficiente
 ## 🛠️ Tecnologias Utilizadas
 
 - ✔️ Linguagem: JavaScript
