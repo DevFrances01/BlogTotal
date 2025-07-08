@@ -3,6 +3,7 @@
      
 <img src="img/51.png" alt="Gato preto" width="150" style="background-color:white; padding:60px; border-radius:50%; border:1px solid #ddd;">
 
+
  ## BlgoTotal
 **BlogTotal** é um projeto de blog desenvolvido para organizar, publicar e gerenciar conteúdos de forma simples e eficiente
 ## 🛠️ Tecnologias Utilizadas
@@ -36,7 +37,7 @@
 
 </pre>
 
-
+<img src="img/NRH2.gif" alt="Gato preto" width="150" style="background-color:white; padding:60px; border-radius:50%; border:1px solid #ddd;">
 
 
 ## 📦 Instalação
