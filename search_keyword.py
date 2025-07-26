@@ -2,7 +2,10 @@
 
 arquivo = "Home/blog.html"
 print("BlogTotal-pagina,Home/blog.html")
+print("search_keyword:")
 
+
+ 
 
 # Solicita a palavra-chave ao usuário
 palavra_chave = input("Digite a palavra-chave para buscar no arquivo: ").lower()
