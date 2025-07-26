@@ -1,35 +1,43 @@
 # leitor_palavra_chave.py
 
-arquivo = "Home/blog.html"
-print("BlogTotal-pagina,Home/blog.html")
-print("search_keyword:")
+ARQUIVO = "Home/blog.html"
 
+print("🔍 BlogTotal - Leitor de palavras-chave")
+print(f"📄 Arquivo alvo: {ARQUIVO}")
+print("Digite 'sair' a qualquer momento para encerrar.\n")
 
- 
+def buscar_palavra(palavra_chave):
+    try:
+        with open(ARQUIVO, "r", encoding="utf-8", errors="ignore") as f:
+            linhas = f.readlines()
 
-# Solicita a palavra-chave ao usuário
-palavra_chave = input("Digite a palavra-chave para buscar no arquivo: ").lower()
+        encontradas = []
 
-with open(arquivo, "r", encoding="utf-8", errors="ignore") as f:
-    linhas = f.readlines()
+        for i, linha in enumerate(linhas, start=1):
+            if palavra_chave in linha.lower():
+                encontradas.append((i, linha.strip()))
 
-encontradas = []
+        if encontradas:
+            print(f"\n🔎 Resultados para '{palavra_chave}':")
+            for num_linha, conteudo in encontradas:
+                print(f"  👉 Linha {num_linha}: {conteudo}")
+        else:
+            print(f"\n⚠️ Nenhuma ocorrência de '{palavra_chave}' encontrada.")
+    except FileNotFoundError:
+        print(f"❌ Arquivo '{ARQUIVO}' não encontrado.")
+    except Exception as e:
+        print(f"❌ Erro ao ler o arquivo: {e}")
 
-for i, linha in enumerate(linhas, start=1):
-    if palavra_chave in linha.lower():
-        encontradas.append((i, linha.strip()))
+# Loop principal
+while True:
+    entrada = input("\nDigite a palavra-chave: ").strip().lower()
+    
+    if entrada == "sair":
+        print("👋 Encerrando o programa.")
+        break
 
-if encontradas:
-    print(f"Linhas contendo a palavra '{palavra_chave}':")
-    for num_linha, conteudo in encontradas:
-        print(f"Linha {num_linha}: {conteudo}")
-else:
-    print(f"Nenhuma linha contém a palavra '{palavra_chave}'.")
-entrada = input("Digite uma palavra-chave ou 'sair' para encerrar: ").strip()
+    if entrada == "":
+        print("⚠️ Por favor, digite uma palavra válida.")
+        continue
 
-if entrada.lower() == 'sair':
-    print("Encerrando o programa.")
-    # Aqui pode usar break, exit() ou outra lógica para encerrar
-else:
-    # Continua o programa com a entrada fornecida
-    print(f"Você digitou: {entrada}")
+    buscar_palavra(entrada)
