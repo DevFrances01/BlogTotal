@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
     const rocket = document.getElementById('rocket');
     
     // Foguete sobe até metade
-    rocket.style.transition = 'bottom 4s linear';
+    rocket.style.transition = 'bottom 1.9s linear';
     rocket.style.bottom = '50%';
 
     // Chama contínua
