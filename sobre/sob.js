@@ -1,54 +1,37 @@
+const starField = document.querySelector('.stars');
 
-window.addEventListener('load', () => {
-    const rocket = document.getElementById('rocket');
-    
-    // Foguete sobe até metade
-    rocket.style.transition = 'bottom 1.9s linear';
-    rocket.style.bottom = '50%';
+function createStar() {
+    const star = document.createElement('div');
+    star.classList.add('star');
 
-    // Chama contínua
-    const particleInterval = setInterval(() => {
-        const p = document.createElement('div');
-        p.classList.add('particle');
-        p.style.left = `${Math.random() * 20 - 10}px`;
-        rocket.appendChild(p);
-        setTimeout(() => p.remove(), 1000);
-    }, 100);
+    // Definir a posição aleatória
+    const size = Math.random() * 5 + 2; // Tamanho aleatório entre 2 e 7px
+    const posX = Math.random() * 100; // 0 a 100%
+    const posY = Math.random() * 100; // 0 a 100%
 
-    rocket.addEventListener('transitionend', () => {
-        clearInterval(particleInterval); // para a chama normal
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+    star.style.left = `${posX}%`;
+    star.style.top = `${posY}%`;
 
-        // Explosão
-        const rect = rocket.getBoundingClientRect(); // posição exata na tela
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
+    // Definir animação de movimento
+    star.style.animationDuration = `${Math.random() * 2 + 1}s`; // Duração aleatória
+    star.style.animationDelay = `${Math.random() * 2}s`; // Atraso aleatório
 
-        for (let i = 0; i < 50; i++) {
-            const e = document.createElement('div');
-            e.classList.add('particle');
-            e.style.position = 'absolute';
-            e.style.left = `${centerX}px`;
-            e.style.top = `${centerY}px`;
-            e.style.background = 'orange';
-            e.style.width = '15px';
-            e.style.height = '30px';
-            e.style.borderRadius = '50%';
-            e.style.transition = 'transform 2s ease-out, opacity 1.5s ease-out';
-            document.body.appendChild(e);
+    starField.appendChild(star);
+}
 
-            // movimento aleatório em todas as direções
-            const angle = Math.random() * 20* Math.PI;
-            const distance = 50 + Math.random() * 100;
+// Criar várias estrelas
+for (let i = 0; i < 100; i++) {
+    createStar();
+}
 
-            setTimeout(() => {
-                e.style.transform = `translate(${Math.cos(angle)*distance}px, ${Math.sin(angle)*distance}px)`;
-                e.style.opacity = '0';
-            }, 10);
+function toggleProject(imageId, linkId) {
+    const img = document.getElementById(imageId);
+    const link = document.getElementById(linkId);
 
-            setTimeout(() => e.remove(), 2100);
-        }
-
-        // Foguete desaparece
-        rocket.style.opacity = '0';
-    });
-});
+    // Alterna a exibição da imagem e do link
+    const isVisible = img.style.display === 'block';
+    img.style.display = isVisible ? 'none' : 'block';
+    link.style.display = isVisible ? 'none' : 'block';
+}
