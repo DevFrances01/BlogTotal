@@ -11,7 +11,7 @@
 - ✔️ Linguagem: JavaScript
 - ✔️ Framework/CSS: Bootstrap
 - ✔️ Fonte personalizada: Google Fonts
-- ✔️ Sem uso de banco de dados até o momento (baseado em dados estáticos)
+
 
 <pre>
 📁 Home
@@ -35,17 +35,6 @@
 
 
 
-<div align="center">
-  <img src="Readme/readme.png" alt="Gato preto" width="400" style="background-color:white; padding:60px; border-radius:50%; border:1px solid #ddd;">
-</div>
 
 
 
-
-## 📦 Instalação
-
-Clone o repositório:
-
-```bash
-git clone https://github.com/seu-usuario/BlogTotal.git
-cd BlogTotal
