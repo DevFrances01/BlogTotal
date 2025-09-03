@@ -8,7 +8,5 @@ function toggleDarkMode() {
   } else {
     btn.innerHTML = '<i class="bi bi-sun-fill"></i> '; // exemplo com ícone do sol
   }
-}document.getElementById('closePopup').addEventListener('click', function () {
-  document.getElementById('infoPopup').style.display = 'none';
-});
+};
 
