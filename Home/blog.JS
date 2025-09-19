@@ -10,3 +10,15 @@ function toggleDarkMode() {
   }
 };
 
+const topBtn = document.getElementById("topBtn");
+window.addEventListener("scroll", () => {
+  topBtn.style.display = window.scrollY > 300 ? "flex" : "none";
+});
+function toggleDarkMode() {
+  document.body.classList.toggle("modo-escuro");
+  const icon = document.querySelector("#modoBtn i");
+  icon.className = document.body.classList.contains("modo-escuro")
+    ? "bi bi-sun-fill"
+    : "bi bi-moon-fill";
+}
+

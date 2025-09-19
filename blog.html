@@ -8,7 +8,7 @@
   <link rel="website icon" type="png" href="/img/5.png">
   <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="Home/blog.css">
+  <link rel="stylesheet" href="Home/blog.css">          
 </head>
 
 <body>
@@ -34,7 +34,7 @@
 
 
     <!-- Seção de Vídeo -->
-    <section class="post">
+
 
       <video controls width="100%">
         <source src="/videos/Explicador no YouTube ‐ Feito com o Clipchamp.mp4" type="video/mp4">
@@ -42,7 +42,8 @@
       </video>
     </section>
     <!-- Seção de Artigo -->
-    <section class="post">
+           <section class="post" data-id="3">
+  <button onclick="toggleFav(this)">❤ Favoritar</button>
 
       <img src="/img/1.png" alt="Imagem do jogo Hellblade" class="imagem-responsiva" loading="lazy">
 
@@ -93,8 +94,8 @@
         estiver disposto a embarcar nessa jornada intensa com Senua.</p>
 
     </section>
-    <section class="post">
-
+        <section class="post" data-id="2">
+  <button onclick="toggleFav(this)">❤ Favoritar</button>
       <img src="/img/2.png" alt="Imagem de Tell Me Why" class="imagem-responsiva" loading="lazy">
       <p>
         <i class="bi bi-card-image"></i> <strong>Visual & Direção de Arte</strong><br>
@@ -142,7 +143,10 @@
       </p>
 
     </section>
-    <section class="post">
+    <section class="post" data-id="1">
+  <button onclick="toggleFav(this)">❤ Favoritar</button>
+ 
+
 
       <img src="/img/3.png" alt="Imagem de Pixote" class="imagem-responsiva" loading="lazy">
       <p>
@@ -223,9 +227,9 @@
 
 
 
-  <p>© 2025 Blog. Todos os direitos reservados. devfrances </p>
+  <p>© 2025 Todos os direitos reservados. devfrances </p>
 
-
+<script src="Home/curt.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/Home/blog.JS"></script>
 </body>
