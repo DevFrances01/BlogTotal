@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -12,37 +13,40 @@ html {
 }
 
 body {
-  font-family: 'Inter', Arial, sans-serif;
+
   background: #f7f8fc;
   color: #333;
   line-height: 1.6;
+  min-height: 100vh;
 }
-
+head{
+  text-align: center;
+;
+}
 header {
-  background: linear-gradient(270deg, #000d47, #000000);
-  background-size: 600% 600%;
-  animation: moverGradiente 10s ease infinite;
-  color: #fff;
-  padding: 2rem 1rem;
+  padding: 1rem;                     /* espaço simples */
   text-align: center;
   font-family: "Alfa Slab One", serif;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-  letter-spacing: 1px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  font-size: 1.5rem;                 /* legível e discreto */
+  color: #fff;
+
+  background: #000000;               /* fundo sólido, profissional */
+
+  position: relative;
 }
 
-@keyframes moverGradiente {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
 
+
+
+
+/* ===== MAIN ===== */
 main {
   max-width: 900px;
   margin: auto;
   padding: 2rem 1rem;
 }
 
+/* ===== POSTS ===== */
 .post {
   background: #fff;
   margin-bottom: 2rem;
@@ -58,26 +62,30 @@ main {
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-video, .imagem-responsiva {
+/* ===== MÍDIA ===== */
+video, 
+.imagem-responsiva {
   width: 100%;
   height: auto;
   display: block;
   margin: 1rem 0;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  object-fit: cover;
 }
 
-a {
-  color: #0278ff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
 }
 
-a:hover {
-  text-decoration: underline;
-}
+/* ===== LINKS ===== */
 
+
+
+/* ===== HEADINGS ===== */
 h2 {
   font-family: "Permanent Marker", cursive;
   font-weight: 400;
@@ -85,14 +93,7 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.titulo-blog {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  font-size: 2.2rem;
-}
-
+/* ===== BOTÃO MODO ESCURO ===== */
 #modoBtn {
   position: absolute;
   top: 20px;
@@ -114,6 +115,7 @@ h2 {
   box-shadow: 0 6px 16px rgba(0,0,0,0.4);
 }
 
+/* ===== MODO ESCURO ===== */
 .modo-escuro {
   background: #0e0e14;
   color: #f0f0f5;
@@ -129,16 +131,17 @@ h2 {
   color: #bbb;
 }
 
-.modo-escuro a {
-  color: #00c6ff;
-}
 
+
+/* ===== PARÁGRAFOS ===== */
 p {
   margin-bottom: 1rem;
+
 }
 
+/* ===== BOTÃO VOLTAR AO TOPO ===== */
 #topBtn {
-  position: fixed;
+  position: fixed;text-emphasis-style: ;
   bottom: 25px;
   right: 25px;
   width: 50px;
@@ -162,21 +165,36 @@ p {
   box-shadow: 0 0 12px rgba(2,120,255,0.7);
 }
 
-/* Botões de coração */
+
 button {
-  color: rgb(25, 0, 255);      /* cor padrão azul */
-  border: none;
-  background-color: transparent;
   cursor: pointer;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  border: none;
+  background: none;
   transition: color 0.3s ease, transform 0.2s ease;
+  color: rgb(25, 0, 255); /* Cor padrão */
 }
 
-button:hover {
-  color: red;                  /* vermelho ao passar o mouse */
+button.favorito {
+  color: #f00000; /* Fica vermelho quando favoritado */
+  transform: scale(1.2);
 }
 
-.favorito {
-  color: red;                   /* vermelho fixo quando favoritado */
-  transform: scale(1.2);        /* aumenta um pouco */
+
+
+.nav-link {
+  color: #ececec;            /* cor padrão */
+  text-decoration: none;
+
+}
+
+.nav-link {
+  color: #ececec; /* cor padrão */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff; /* muda para branco no hover */
+  text-decoration: underline; /* opcional */
 }
