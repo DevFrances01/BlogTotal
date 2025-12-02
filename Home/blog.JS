@@ -17,7 +17,7 @@ window.addEventListener("scroll", () => {
 function toggleDarkMode() {
   document.body.classList.toggle("modo-escuro");
   const icon = document.querySelector("#modoBtn i");
-  icon.className = document.body.classList.contains("modo-escuro")
+  icon.className = document.body.classList.contains("modo-escuro") 
     ? "bi bi-sun-fill"
     : "bi bi-moon-fill";
 }
