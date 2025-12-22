@@ -8,7 +8,8 @@
   <link rel="website icon" type="png" href="5.png">
   <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="Home/blog.css">     
+  <link rel="stylesheet" href="Home/blog.css"> 
+  <link rel="stylesheet" href="Home/card.css">    
   <script src="Home/blog.JS"></script>
 </head>
 
@@ -36,8 +37,13 @@
   <main>
 
 
+<div class="ovo">
+ <img src="NRH2.gif" alt="Ovo">
+ </div>
+<p>
+  
 
-     
+         <h1 class="typing">BlogTotal</h1>
     </section>
     <!-- Seção de Artigo -->
            <section class="post" data-id="3">
@@ -146,48 +152,7 @@
  
 
 
-      <img src="img/3.png" alt="Imagem de Pixote" class="imagem-responsiva" loading="lazy">
-      <p>
-        <i class="bi bi-camera-reels"></i> <strong>Fotografia & Direção</strong><br>
-        Hector Babenco entrega uma direção crua e realista, com câmera na mão, luz natural e locações reais. A
-        fotografia é suja, dura, e profundamente eficaz para transmitir a violência da realidade que o filme denuncia.
-
-        <br><br>
-
-        <i class="bi bi-music-note-beamed"></i> <strong>Trilha Sonora</strong><br>
-        A trilha de John Neschling é discreta e pontual, dando espaço para os silêncios e os sons urbanos. A ausência
-        de música em várias cenas aumenta o impacto do realismo.
-
-        <br><br>
-
-        <i class="bi bi-exclamation-triangle-fill"></i> <strong>Temas e Proposta</strong><br>
-        Um retrato brutal da infância marginalizada no Brasil dos anos 80. O filme expõe o abandono institucional, a
-        violência policial e a falência do sistema de reabilitação. É uma obra que incomoda — como deve ser.
-
-        <br><br>
-
-        <i class="bi bi-award-fill"></i> <strong>Reconhecimento & Impacto</strong><br>
-        Reconhecido internacionalmente, Pixote é mais que um filme: é denúncia. A atuação do jovem Fernando Ramos da
-        Silva (Pixote) marcou o cinema mundial e escancarou uma realidade que o Brasil insistia em ignorar.
-
-        <br><br>
-
-        <i class="bi bi-person-fill"></i> <strong>Para Quem é o Filme?</strong><br>
-        Indicado para quem busca cinema social, cru e transformador. Não recomendado para quem prefere entretenimento
-        leve ou histórias com alívio cômico.
-
-        <br><br>
-
-        <i class="bi bi-journal-text"></i> <strong>Resumo da Experiência</strong><br>
-        *Pixote* é um soco no estômago. Uma obra visceral, incômoda e essencial. Vai muito além do cinema — é um grito
-        por atenção, justiça e memória.
-      </p>
-
-    </section>
-
-
-
-
+     
 
 
 
@@ -198,9 +163,6 @@
         </div>
         <div class="carousel-item">
           <img src="img/2.png" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="img/3.png" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
           <img src="img/zel.png" class="d-block w-100" alt="...">
@@ -228,6 +190,16 @@
 
 <script src="Home/curt.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  const carousel = document.querySelector('.carousel');
+
+  document.querySelector('.next').onclick = () =>
+    carousel.scrollBy({ left: 550, behavior: 'smooth' });
+
+  document.querySelector('.prev').onclick = () =>
+    carousel.scrollBy({ left: -550, behavior: 'smooth' });
+</script>
+
 </body>
 
 </html>
